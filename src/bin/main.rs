@@ -171,8 +171,8 @@ mod app {
         heater_pwm.enable();
 
         let mut pid = Pid::new(TEMP_SETPOINT, 100.);
-        pid.p(20., 100.);
-        pid.i(10., 100.);
+        pid.p(200., 100.);
+        pid.i(1., 100.);
 
         let mut last_loop_instant = Systick::now();
 
